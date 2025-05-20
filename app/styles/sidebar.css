@@ -1,0 +1,193 @@
+.sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, var(--theme-color-primary), #005fa3 80%);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    min-height: 0; /* เพิ่มบรรทัดนี้ */
+    position: relative;
+    transition: width 0.2s;
+    box-shadow: 2px 0 8px #0001;
+    z-index: 20;
+    /* background-image: url("/blurry-gradient.svg"),
+        linear-gradient(135deg, var(--theme-color-primary), #005fa3 80%); */
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.sidebar.collapsed {
+    width: 72px;
+}
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 24px 20px 16px 20px;
+}
+.sidebar-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 8px;
+    padding: 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+.sidebar-logo-svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sidebar-logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+.sidebar-menu {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 12px;
+    overflow-y: auto; /* เพิ่มบรรทัดนี้ */
+    min-height: 0; /* เพิ่มบรรทัดนี้ */
+}
+.sidebar-menu::-webkit-scrollbar {
+    width: 8px;
+    background: transparent;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 6px;
+    transition: background 0.2s;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.sidebar-menu {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+}
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition:
+        background 0.15s,
+        color 0.15s;
+}
+.sidebar-item:hover,
+.sidebar-item:focus {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+}
+.sidebar-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    min-height: 24px;
+    font-size: 1.25rem;
+}
+.sidebar-text {
+    white-space: nowrap;
+}
+.sidebar.collapsed .sidebar-text,
+.sidebar.collapsed .sidebar-submenu {
+    display: none;
+}
+.sidebar-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+}
+.sidebar-submenu {
+    margin-left: 40px;
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.sidebar-subitem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 0;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.15s;
+}
+.sidebar-subitem:hover,
+.sidebar-subitem:focus {
+    color: #cce6ff;
+}
+.sidebar-footer {
+    .sidebar-footer {
+        margin-top: auto;
+        padding: 16px 20px 32px 20px;
+        /* ปรับขอบซ้าย-ขวาเป็น 20px ให้เท่ากับ sidebar-menu */
+        /* เพิ่ม padding-bottom เป็น 32px */
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+.sidebar-logout {
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+    padding: 12px 20px;
+    width: 100%; /* เพิ่มบรรทัดนี้ */
+    transition:
+        background 0.15s,
+        color 0.15s;
+}
+.sidebar-logout:hover {
+    color: #ffb4b4;
+    background: rgba(255, 255, 255, 0.08);
+}
+.sidebar-toggle-sub {
+    width: 100%;
+    background: none;
+    border: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition:
+        background 0.15s,
+        color 0.15s;
+}
+.sidebar-toggle-sub:hover,
+.sidebar-toggle-sub:focus {
+    background: rgba(255, 255, 255, 0.08);
+}
+.sidebar-caret {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}

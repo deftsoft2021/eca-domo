@@ -1,5 +1,16 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import '@fontsource/prompt/300.css'; // light
+import '@fontsource/prompt/400.css'; // regular
+import '@fontsource/prompt/500.css'; // medium
+import '@fontsource/prompt/700.css'; // bold
+// Supports weights 100-900
+import '@fontsource-variable/roboto';
+
+// sarabun font
+import '@fontsource/sarabun';
+// Supports weights 100-900
+
 import "./globals.css";
 
 const geistSans = Geist({
@@ -25,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`font-prompt ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
       </body>
