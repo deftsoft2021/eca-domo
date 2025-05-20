@@ -1,3 +1,4 @@
+# Project Stucture
 
 app/
   layout.tsx           // Global layout (เช่น ใส่ฟอนต์, theme)

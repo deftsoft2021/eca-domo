@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 type Equipment = {
   name: string;
@@ -61,17 +62,23 @@ export default function EquipmentSelectModal({
           </div>
           {/* ขวา: เลือกอุปกรณ์ */}
           <div className="w-[350px] bg-white rounded border p-2 flex flex-col gap-2 overflow-auto">
-            {equipmentList.map((eq, idx) => (
+            {equipmentList.map((eq) => (
               <div key={eq.name} className="flex items-center gap-2 border-b py-2">
-                <img
+                <Image
                   src={eq.image || "/no-image.png"}
                   alt={eq.name}
+                  width={56}
+                  height={56}
                   className="w-14 h-14 object-contain rounded bg-gray-100"
                 />
                 <div className="flex-1">
                   <div className="font-bold">{eq.name}</div>
-                  <div className="text-xs text-gray-500">สต็อก <span className="font-bold">{eq.stock}</span></div>
-                  <div className="text-xs text-gray-500">WMS <span className="font-bold">{eq.wms}</span></div>
+                  <div className="text-xs text-gray-500">
+                    สต็อก <span className="font-bold">{eq.stock}</span>
+                  </div>
+                  <div className="text-xs text-gray-500">
+                    WMS <span className="font-bold">{eq.wms}</span>
+                  </div>
                 </div>
                 <div className="flex items-center gap-1">
                   <button
