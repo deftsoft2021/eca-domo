@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 app/
   layout.tsx           // Global layout (เช่น ใส่ฟอนต์, theme)
   page.tsx             // หน้าแรก (/)
@@ -26,3 +27,16 @@ public/
 tailwind.config.js
 package.json
 ...
+===
+
+# eca-domo
+
+eca-domo web appilication
+
+>>>>>>> d0773e6905a2f547a4839cd58db3b155a10c795a
+>>>>>>>
+>>>>>>
+>>>>>
+>>>>
+>>>
+>>
