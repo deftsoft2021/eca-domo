@@ -61,7 +61,7 @@ export default function DashboardPage() {
   return (
     <MainLayout>
       <div className="p-8">
-        <h1 className="text-2xl font-bold text-primary mb-6 font-prompt">
+        <h1 className="text-2xl font-bold text-primary mb-6">
           แดชบอร์ด
         </h1>
         <div className="bg-white rounded-xl shadow-md p-6 max-w-3xl mx-auto">
