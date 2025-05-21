@@ -2,7 +2,6 @@
 import { useRouter } from 'next/navigation';
 import AuthLayout from '../layouts/AuthLayout';
 import { useState } from 'react';
-import Swal from 'sweetalert2';
 
 export default function LoginPage() {
   const router = useRouter();
