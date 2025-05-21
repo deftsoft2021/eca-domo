@@ -9,21 +9,22 @@ export default function LoginPage() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
 
-  function showAlert() {
-    Swal.fire({
-      title: 'สำเร็จ!',
-      text: 'เข้าสู่ระบบเรียบร้อย',
-      icon: 'success',
-      confirmButtonText: 'ไปที่แดชบอร์ด'
-    }).then(() => {
-      router.push('/dashboard');
-    });
-  }
+  // function showAlert() {
+  //   Swal.fire({
+  //     title: 'สำเร็จ!',
+  //     text: 'เข้าสู่ระบบเรียบร้อย',
+  //     icon: 'success',
+  //     confirmButtonText: 'ไปที่แดชบอร์ด'
+  //   }).then(() => {
+  //     router.push('/dashboard');
+  //   });
+  // }
 
   function handleLogin(e: React.FormEvent) {
     e.preventDefault();
     if (username && password) {
-      showAlert();
+      // showAlert();
+       router.push('/dashboard');
     }
     // else: แสดง error ได้ตามต้องการ
   }
